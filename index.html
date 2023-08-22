@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="./dist/styles/index.css" rel="stylesheet" />
+</head>
+
+<body>
+  <header>
+    <nav id="navbar" class="w-full lg:bg-surface shadow-sm">
+      <div class="flex flex-col lg:flex-row lg:container lg:mx-auto lg:max-w-[1184px]">
+        <div class="flex items-center h-[4.5rem] px-6 drop-shadow-sm bg-surface justify-between lg:drop-shadow-none">
+          <a href="./form.html">
+            <img src="assets/images/logo.png" alt="logo" />
+          </a>
+          <div class="flex lg:hidden">
+            <button type="button" id="navbar-btn" class="text-text focus:outline-none">
+              <svg class="h-8 w-8 fill-current" viewBox="0 0 24 24">
+                <path id="navbar-btn-close" fill-rule="evenodd" clip-rule="evenodd"
+                  d="M3 7h18v2H3V7zm0 5h18v2H3v-2zm0 5h18v2H3v-2z" />
+                <path id="navbar-btn-open"
+                  d="M6.4 19L5 17.6L10.6 12L5 6.4L6.4 5L12 10.6L17.6 5L19 6.4L13.4 12L19 17.6L17.6 19L12 13.4L6.4 19Z" />
+              </svg>
+            </button>
+          </div>
+        </div>
+        <div id="navbar-menu"
+          class="transition-all duration-700 h-0 bg-surface overflow-hidden lg:h-[4.5rem] lg:flex-1 lg:bg-surface lg:transition-none">
+          <ul class="flex flex-col justify-center gap-6 p-6 pr-4 pt-12 lg:flex-row lg:py-0 lg:justify-end lg:h-full lg:items-center lg:gap-8">
+            <li>
+                <a href="./index.html" class="py-2.5 hover:text-4xl transition-all flex text-3xl items-center justify-between lg:text-base lg:hover:text-lg">
+                   Health Insurance
+                    <svg class="h-12 w-12 lg:hidden" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9.21739 17.2826C9.07246 17.1377 9 16.9661 9 16.7678C9 16.5696 9.07246 16.3982 9.21739 16.2536L13.4638 12.0072L9.2029 7.74638C9.06763 7.61111 9 7.44203 9 7.23913C9 7.03623 9.07246 6.86232 9.21739 6.71739C9.36232 6.57246 9.53391 6.5 9.73217 6.5C9.93043 6.5 10.1018 6.57246 10.2464 6.71739L15.1159 11.6014C15.1739 11.6594 15.2151 11.7222 15.2394 11.7899C15.2638 11.8575 15.2757 11.93 15.2754 12.0072C15.2754 12.0845 15.2632 12.157 15.2388 12.2246C15.2145 12.2923 15.1735 12.3551 15.1159 12.413L10.2319 17.2971C10.0966 17.4324 9.92985 17.5 9.73159 17.5C9.53333 17.5 9.36193 17.4275 9.21739 17.2826Z" fill="#3F3F3F"/>        
+                    </svg>
+                </a>
+            </li>
+            <li>
+                <a href="./medicare-plans.html" class="py-2.5 hover:text-4xl transition-all flex text-3xl items-center justify-between lg:text-base lg:hover:text-lg">
+                    Medicare Plans
+                    <svg class="h-12 w-12 lg:hidden" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9.21739 17.2826C9.07246 17.1377 9 16.9661 9 16.7678C9 16.5696 9.07246 16.3982 9.21739 16.2536L13.4638 12.0072L9.2029 7.74638C9.06763 7.61111 9 7.44203 9 7.23913C9 7.03623 9.07246 6.86232 9.21739 6.71739C9.36232 6.57246 9.53391 6.5 9.73217 6.5C9.93043 6.5 10.1018 6.57246 10.2464 6.71739L15.1159 11.6014C15.1739 11.6594 15.2151 11.7222 15.2394 11.7899C15.2638 11.8575 15.2757 11.93 15.2754 12.0072C15.2754 12.0845 15.2632 12.157 15.2388 12.2246C15.2145 12.2923 15.1735 12.3551 15.1159 12.413L10.2319 17.2971C10.0966 17.4324 9.92985 17.5 9.73159 17.5C9.53333 17.5 9.36193 17.4275 9.21739 17.2826Z" fill="#3F3F3F"/>        
+                    </svg>
+                </a>
+            </li>
+            <li>
+                <a href="./about-us.html" class="py-2.5 hover:text-4xl transition-all flex text-3xl items-center justify-between lg:text-base lg:hover:text-lg">
+                    About us
+                    <svg class="h-12 w-12 lg:hidden" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9.21739 17.2826C9.07246 17.1377 9 16.9661 9 16.7678C9 16.5696 9.07246 16.3982 9.21739 16.2536L13.4638 12.0072L9.2029 7.74638C9.06763 7.61111 9 7.44203 9 7.23913C9 7.03623 9.07246 6.86232 9.21739 6.71739C9.36232 6.57246 9.53391 6.5 9.73217 6.5C9.93043 6.5 10.1018 6.57246 10.2464 6.71739L15.1159 11.6014C15.1739 11.6594 15.2151 11.7222 15.2394 11.7899C15.2638 11.8575 15.2757 11.93 15.2754 12.0072C15.2754 12.0845 15.2632 12.157 15.2388 12.2246C15.2145 12.2923 15.1735 12.3551 15.1159 12.413L10.2319 17.2971C10.0966 17.4324 9.92985 17.5 9.73159 17.5C9.53333 17.5 9.36193 17.4275 9.21739 17.2826Z" fill="#3F3F3F"/>        
+                    </svg>
+                </a>
+            </li>
+            <li>
+                <a href="./contact-us.html" class="py-2.5 hover:text-4xl transition-all flex text-3xl items-center justify-between lg:text-base lg:hover:text-lg">
+                    Contact Us
+                    <svg class="h-12 w-12 lg:hidden" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9.21739 17.2826C9.07246 17.1377 9 16.9661 9 16.7678C9 16.5696 9.07246 16.3982 9.21739 16.2536L13.4638 12.0072L9.2029 7.74638C9.06763 7.61111 9 7.44203 9 7.23913C9 7.03623 9.07246 6.86232 9.21739 6.71739C9.36232 6.57246 9.53391 6.5 9.73217 6.5C9.93043 6.5 10.1018 6.57246 10.2464 6.71739L15.1159 11.6014C15.1739 11.6594 15.2151 11.7222 15.2394 11.7899C15.2638 11.8575 15.2757 11.93 15.2754 12.0072C15.2754 12.0845 15.2632 12.157 15.2388 12.2246C15.2145 12.2923 15.1735 12.3551 15.1159 12.413L10.2319 17.2971C10.0966 17.4324 9.92985 17.5 9.73159 17.5C9.53333 17.5 9.36193 17.4275 9.21739 17.2826Z" fill="#3F3F3F"/>        
+                    </svg>
+                </a>
+            </li>
+            <li>
+                <a href="./privacy-policy.html" class="py-2.5 hover:text-4xl transition-all flex text-3xl items-center justify-between lg:text-base lg:hover:text-lg">
+                    Privacy Policy
+                    <svg class="h-12 w-12 lg:hidden" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9.21739 17.2826C9.07246 17.1377 9 16.9661 9 16.7678C9 16.5696 9.07246 16.3982 9.21739 16.2536L13.4638 12.0072L9.2029 7.74638C9.06763 7.61111 9 7.44203 9 7.23913C9 7.03623 9.07246 6.86232 9.21739 6.71739C9.36232 6.57246 9.53391 6.5 9.73217 6.5C9.93043 6.5 10.1018 6.57246 10.2464 6.71739L15.1159 11.6014C15.1739 11.6594 15.2151 11.7222 15.2394 11.7899C15.2638 11.8575 15.2757 11.93 15.2754 12.0072C15.2754 12.0845 15.2632 12.157 15.2388 12.2246C15.2145 12.2923 15.1735 12.3551 15.1159 12.413L10.2319 17.2971C10.0966 17.4324 9.92985 17.5 9.73159 17.5C9.53333 17.5 9.36193 17.4275 9.21739 17.2826Z" fill="#3F3F3F"/>        
+                    </svg>
+                </a>
+            </li>
+            <li>
+                <a href="./terms-of-service.html" class="py-2.5 hover:text-4xl transition-all flex text-3xl items-center justify-between lg:text-base lg:hover:text-lg">
+                    Terms of Services
+                    <svg class="h-12 w-12 lg:hidden" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9.21739 17.2826C9.07246 17.1377 9 16.9661 9 16.7678C9 16.5696 9.07246 16.3982 9.21739 16.2536L13.4638 12.0072L9.2029 7.74638C9.06763 7.61111 9 7.44203 9 7.23913C9 7.03623 9.07246 6.86232 9.21739 6.71739C9.36232 6.57246 9.53391 6.5 9.73217 6.5C9.93043 6.5 10.1018 6.57246 10.2464 6.71739L15.1159 11.6014C15.1739 11.6594 15.2151 11.7222 15.2394 11.7899C15.2638 11.8575 15.2757 11.93 15.2754 12.0072C15.2754 12.0845 15.2632 12.157 15.2388 12.2246C15.2145 12.2923 15.1735 12.3551 15.1159 12.413L10.2319 17.2971C10.0966 17.4324 9.92985 17.5 9.73159 17.5C9.53333 17.5 9.36193 17.4275 9.21739 17.2826Z" fill="#3F3F3F"/>        
+                    </svg>
+                </a>
+            </li>
+            
+        </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <main class=" flex flex-col font-['roboto'] items-center max-w-[1184px] lg:mx-auto">
+    <!-- Card 1 -->
+    <div id="cardContainer1" data-card="1" class="flex flex-col px-7 gap-12 pt-8 md:max-w-[425px] lg:pt-14 lg:max-w-[534px] lg:px-0 lg:items-center">
+     
+      <div class="flex flex-col gap-12 lg:items-center">
+        <img src="./assets/images/step1.png" class="lg:w-[472px] lg:h-[32px]"/>
+
+        <p class="text-2xl text-primary font-bold text-center">
+          Are you looking for individual or family coverage?
+        </p>
+      </div>
+
+      <div class="flex flex-col gap-4 lg:mx-auto lg:max-w-[332px] lg:w-full">
+        <button class="text-2xl text-primary p-4 border border-secondary rounded"
+          onclick="nextCard()">
+          Individual
+        </button>
+        <button class="text-2xl text-primary p-4 border border-secondary rounded"
+          onclick="nextCard()">
+          Family
+        </button>
+      </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div id="cardContainer2" data-card="2" class="flex flex-col gap-8 px-7 pt-8 hidden md:max-w-[425px] lg:pt-14 lg:max-w-[744px] lg:w-full lg:px-0 lg:items-center">
+     
+      <div class="flex flex-col gap-12">
+        <img src="./assets/images/step2.png" class="lg:w-[472px] lg:h-[32px]"/>
+
+        <p class="text-2xl text-primary font-bold text-center">
+          What’s your household size?
+        </p>
+      </div>
+
+      <form class="flex flex-col gap-2 lg:flex-row lg:gap-4 lg:w-full">
+        <div class="flex flex-col gap-2 flex-1">
+          <div class="flex items-center justify-between px-4 py-2 border border-secondary h-16 rounded">
+            <div class="flex gap-4 items-center">
+              <span class="text-2xl text-secondary font-extrabold">
+                1
+              </span>
+
+              <div class="flex gap-2">
+                <img src="./assets/images/person.png" class="shrink-0 w-6 h-6" />
+              </div>
+            </div>
+
+            <input type="radio" name="option1" value="1" />
+          </div>
+
+          <div class="flex items-center justify-between px-4 py-2 border border-secondary h-16 rounded">
+            <div class="flex gap-4 items-center">
+              <span class="text-2xl text-secondary font-extrabold">
+                2
+              </span>
+
+              <div class="flex gap-2">
+                <img src="./assets/images/person.png" class="shrink-0 w-6 h-6" />
+                <img src="./assets/images/person.png" class="shrink-0 w-6 h-6" />
+              </div>
+            </div>
+
+            <input type="radio" name="option2" value="2" />
+          </div>
+
+          <div class="flex items-center justify-between px-4 py-2 border border-secondary h-16 rounded">
+            <div class="flex gap-4 items-center">
+              <span class="text-2xl text-secondary font-extrabold">
+                3
+              </span>
+
+              <div class="flex gap-2">
+                <img src="./assets/images/person.png" class="shrink-0 w-6 h-6" />
+                <img src="./assets/images/person.png" class="shrink-0 w-6 h-6" />
+                <img src="./assets/images/person.png" class="shrink-0 w-6 h-6" />
+              </div>
+            </div>
+
+            <input type="radio" name="option3" value="3" />
+          </div>
+        </div>
+
+        <div class="flex flex-col gap-2 flex-1">
+          <div class="flex items-center justify-between px-4 py-2 border border-secondary h-16 rounded">
+            <div class="flex gap-4 items-center">
+              <span class="text-2xl text-secondary font-extrabold">
+                4
+              </span>
+
+              <div class="flex gap-2">
+                <img src="./assets/images/person.png" class="shrink-0 w-6 h-6" />
+                <img src="./assets/images/person.png" class="shrink-0 w-6 h-6" />
+                <img src="./assets/images/person.png" class="shrink-0 w-6 h-6" />
+                <img src="./assets/images/person.png" class="shrink-0 w-6 h-6" />
+              </div>
+            </div>
+
+            <input type="radio" name="option4" value="4" />
+          </div>
+
+          <div class="flex items-center justify-between px-4 py-2 border border-secondary h-16 rounded">
+            <div class="flex gap-4 items-center">
+              <span class="text-2xl text-secondary font-extrabold">
+                5
+              </span>
+
+              <div class="flex gap-2">
+                <img src="./assets/images/person.png" class="shrink-0 w-6 h-6" />
+                <img src="./assets/images/person.png" class="shrink-0 w-6 h-6" />
+                <img src="./assets/images/person.png" class="shrink-0 w-6 h-6" />
+                <img src="./assets/images/person.png" class="shrink-0 w-6 h-6" />
+                <img src="./assets/images/person.png" class="shrink-0 w-6 h-6" />
+              </div>
+            </div>
+
+            <input type="radio" name="option5" value="5" />
+          </div>
+
+          <div class="flex items-center justify-between px-4 py-2 border border-secondary h-16 rounded">
+            <div class="flex gap-4 items-center">
+              <span class="text-2xl text-secondary font-extrabold">
+                6
+              </span>
+
+              <div class="flex gap-2">
+                <img src="./assets/images/person.png" class="shrink-0 w-6 h-6" />
+                <img src="./assets/images/person.png" class="shrink-0 w-6 h-6" />
+                <img src="./assets/images/person.png" class="shrink-0 w-6 h-6" />
+                <img src="./assets/images/person.png" class="shrink-0 w-6 h-6" />
+                <img src="./assets/images/person.png" class="shrink-0 w-6 h-6" />
+                <img src="./assets/images/person.png" class="shrink-0 w-6 h-6" />
+              </div>
+            </div>
+
+            <input type="radio" name="option6" value="6" />
+          </div>
+        </div>
+      </form>
+
+      <div class="flex flex-col gap-4 lg:flex-row-reverse lg:w-full">
+        <button class="text-2xl p-4 rounded bg-accent text-surface font-bold lg:flex-1" onclick="nextCard()">
+          Next
+        </button>
+        <button class="text-2xl p-4 rounded border border-secondary text-secondary lg:flex-1"
+          onclick="previousCard()">
+          Back
+        </button>
+      </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div id="cardContainer3" data-card="3" class="flex flex-col px-7 pt-8 gap-8 hidden md:max-w-[425px] lg:pt-14 lg:max-w-[744px] lg:w-full lg:px-0 lg:items-center">
+     
+      <div class="flex flex-col gap-12">
+        <img src="./assets/images/step3.png" class="lg:w-[472px] lg:h-[32px]"/>
+
+        <p class="text-2xl text-primary font-bold text-center">
+          What’s your household income?
+        </p>
+      </div>
+
+      <form class="flex flex-col gap-2 lg:w-full">
+        <div class="flex flex-col gap-2 lg:flex-row lg:gap-4">
+          <div class="flex flex-col gap-2 lg:flex lg:flex-col lg:flex-1">
+            <div class="flex items-center justify-between px-4 py-2 border border-secondary h-16 rounded">
+              <span class="text-xl text-secondary">
+                Below $17,000
+              </span>
+
+              <input type="radio" name="option1" value="1" />
+            </div>
+
+            <div class="flex items-center justify-between px-4 py-2 border border-secondary h-16 rounded">
+              <span class="text-xl text-secondary">
+                $17,000 - $20,000
+              </span>
+
+              <input type="radio" name="option2" value="2" />
+            </div>
+
+            <div class="flex items-center justify-between px-4 py-2 border border-secondary h-16 rounded">
+              <span class="text-xl text-secondary">
+                $20,000 - $25,000
+              </span>
+
+              <input type="radio" name="option3" value="3" />
+            </div>
+          </div>
+
+          <div class="flex flex-col gap-2 lg:flex lg:flex-col lg:flex-1">
+            <div class="flex items-center justify-between px-4 py-2 border border-secondary h-16 rounded">
+              <span class="text-xl text-secondary">
+                $25,000 - $30,000
+              </span>
+
+              <input type="radio" name="option4" value="4" />
+            </div>
+
+            <div class="flex items-center justify-between px-4 py-2 border border-secondary h-16 rounded">
+              <span class="text-xl text-secondary">
+                $30,000 - $35,000
+              </span>
+
+              <input type="radio" name="option5" value="5" />
+            </div>
+
+            <div class="flex items-center justify-between px-4 py-2 border border-secondary h-16 rounded">
+              <span class="text-xl text-secondary">
+                $35,000 - $40,000
+              </span>
+
+              <input type="radio" name="option6" value="6" />
+            </div>
+          </div>
+        </div>
+
+        <div class="flex items-center justify-between px-4 py-2 border border-secondary h-16 rounded">
+          <span class="text-xl text-secondary">
+            Over $55,000
+          </span>
+
+          <input type="radio" name="option6" value="6" />
+        </div>
+      </form>
+
+      <div class="flex flex-col gap-4 lg:flex-row-reverse lg:w-full">
+        <button class="text-2xl p-4 rounded bg-accent text-surface font-bold lg:flex-1" onclick="nextCard()">
+          Next
+        </button>
+        <button class="text-2xl p-4 rounded border border-secondary text-secondary lg:flex-1"
+          onclick="previousCard()">
+          Back
+        </button>
+      </div>
+    </div>
+
+    <!-- Card 4 -->
+    <div id="cardContainer4" data-card="4" class="flex flex-col px-7 pt-8 gap-8 hidden md:max-w-[425px] lg:pt-14 lg:max-w-[534px] lg:w-full lg:px-0 lg:items-center">
+     
+      <div class="flex flex-col gap-12">
+        <img src="./assets/images/step4.png" class="lg:w-[472px] lg:h-[32px]"/>
+        <p class="text-2xl text-primary font-bold text-center">
+          What’s your gender?
+        </p>
+      </div>
+
+      <div class="flex flex-col gap-8 lg:w-[364px]">
+
+        <form class="flex flex-col gap-2">
+          <div class="flex items-center justify-between px-4 py-2 border border-secondary h-16 rounded">
+            <span class="text-xl text-secondary"> Male </span>
+
+            <input type="radio" name="option1" value="1" />
+          </div>
+
+          <div class="flex items-center justify-between px-4 py-2 border border-secondary h-16 rounded">
+            <span class="text-xl text-secondary"> Female </span>
+
+            <input type="radio" name="option2" value="2" />
+          </div>
+
+          <div class="flex items-center justify-between px-4 py-2 border border-secondary h-16 rounded">
+            <span class="text-xl text-secondary">
+              I prefer not to say
+            </span>
+
+            <input type="radio" name="option3" value="3" />
+          </div>
+        </form>
+
+        <div class="flex flex-col gap-4  lg:w-full">
+          <button class="text-2xl p-4 rounded bg-accent text-surface font-bold" onclick="nextCard()">
+            Next
+          </button>
+          <button class="text-2xl p-4 rounded border border-secondary text-secondary"
+            onclick="previousCard()">
+            Back
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 5 -->
+    <div id="cardContainer5" data-card="5" class="flex flex-col px-7 pt-8 hidden gap-12 md:max-w-[425px] lg:pt-14 lg:max-w-[534px] lg:w-full lg:px-0 lg:items-center">
+
+      <div class="flex flex-col gap-12">
+        <img src="./assets/images/step5.png" class="lg:w-[472px] lg:h-[32px]"/>
+        
+        <p class="text-2xl text-primary font-bold text-center">
+          What’s your date of birth?
+        </p>
+      </div>
+
+      <form class="flex gap-6">
+        <div class="relative lg:w-[100px]">
+          <label class="absolute bg-surface text-placeholder text-xs px-1 ml-3.5 top-[-10px]">Month</label>
+          <input type="number" name="month" placeholder="MM"
+            class="pl-4 py-2 rounded border-[1px] border-secondary w-full h-14" />
+        </div>
+
+        <div class="relative lg:w-[100px]">
+          <label class="absolute bg-surface text-placeholder text-xs px-1 ml-3.5 top-[-10px]">Day</label>
+          <input type="number" name="day" placeholder="DD"
+            class="pl-4 py-2 rounded border-[1px] border-secondary w-full h-14" />
+        </div>
+
+        <div class="relative lg:w-[100px]">
+          <label class="absolute bg-surface text-placeholder text-xs px-1 ml-3.5 top-[-10px]">Year</label>
+          <input type="number" name="year" placeholder="YYYY"
+            class="pl-4 py-2 rounded border-[1px] border-secondary w-full h-14" />
+        </div>
+      </form>
+
+      <div class="flex flex-col gap-4 lg:w-[364px]">
+        <button class="text-2xl p-4 rounded bg-accent text-surface font-bold" onclick="nextCard()">
+          Next
+        </button>
+        <button class="text-2xl p-4 rounded border border-secondary text-secondary"
+          onclick="previousCard()">
+          Back
+        </button>
+      </div>
+    </div>
+
+    <!-- Card 6 -->
+    <div id="cardContainer6" data-card="6" class="flex flex-col px-7 pt-8 gap-8 hidden md:max-w-[425px] lg:pt-14 lg:max-w-[534px] lg:w-full lg:px-0 lg:items-center">
+     
+      <div class="flex flex-col gap-12">
+        <img src="./assets/images/step6.png" class="lg:w-[472px] lg:h-[32px]"/>
+
+        <div>
+          <p class="text-2xl text-primary font-bold text-center">
+            What’s your home address?
+          </p>
+          <p class="text-center font-light text-secondary">
+            We verify your location to provide local quotes in your area
+          </p>
+        </div>
+      </div>
+
+      <form class="flex flex-col gap-6 lg:w-[364px]">
+        <div class="relative">
+          <label
+            class="absolute bg-surface text-placeholder text-xs px-1 ml-3.5 top-[-10px]">Address</label>
+          <input type="text" name="address" placeholder="Address"
+            class="pl-4 py-2 rounded border-[1px] border-secondary w-full h-14" />
+        </div>
+
+        <div class="relative">
+          <label class="absolute bg-surface text-placeholder text-xs px-1 ml-3.5 top-[-10px]">City</label>
+          <input type="text" name="city" placeholder="city"
+            class="pl-4 py-2 rounded border-[1px] border-secondary w-full h-14" />
+        </div>
+
+        <div class="flex gap-6">
+          <div class="relative lg:flex-1">
+            <label
+              class="absolute bg-surface text-placeholder text-xs px-1 ml-3.5 top-[-10px]">State</label>
+            <input type="text" name="state" placeholder="State"
+              class="pl-4 py-2 rounded border-[1px] border-secondary w-full h-14" />
+          </div>
+
+          <div class="relative lg:flex-1">
+            <label class="absolute bg-surface text-placeholder text-xs px-1 ml-3.5 top-[-10px]">ZIP
+              Code</label>
+            <input type="text" name="zip-code" placeholder="ZIP Code"
+              class="pl-4 py-2 rounded border-[1px] border-secondary w-full h-14" />
+          </div>
+        </div>
+      </form>
+
+      <div class="flex flex-col gap-4 lg:w-[364px]">
+        <button class="text-2xl p-4 rounded bg-accent text-surface font-bold" onclick="nextCard()">
+          Next
+        </button>
+        <button class="text-2xl p-4 rounded border border-secondary text-secondary"
+          onclick="previousCard()">
+          Back
+        </button>
+      </div>
+    </div>
+
+    <!-- Card 7 -->
+    <div id="cardContainer7" data-card="7" class="flex flex-col px-7 pt-8 gap-8 hidden md:max-w-[425px] lg:pt-14 lg:max-w-[534px] lg:w-full lg:px-0 lg:items-center">
+      <div class="flex flex-col gap-12">
+       
+        <img src="./assets/images/step7.png" class="lg:w-[472px] lg:h-[32px]"/>
+
+        <div>
+          <p class="text-2xl text-primary font-bold text-center">
+            What’s your full name?
+          </p>
+        </div>
+      </div>
+
+      <form class="flex flex-col gap-6 lg:w-[364px]">
+        <div class="relative">
+          <label class="absolute bg-surface text-placeholder text-xs px-1 ml-3.5 top-[-10px]">First
+            Name</label>
+          <input type="text" name="first-name" placeholder="First Name"
+            class="pl-4 py-2 rounded border-[1px] border-secondary w-full h-14" />
+        </div>
+
+        <div class="relative">
+          <label class="absolute bg-surface text-placeholder text-xs px-1 ml-3.5 top-[-10px]">Last
+            Name</label>
+          <input type="text" name="last-name" placeholder="Last Name"
+            class="pl-4 py-2 rounded border-[1px] border-secondary w-full h-14" />
+        </div>
+      </form>
+
+      <div class="flex flex-col gap-4 lg:w-[364px]">
+        <button class="text-2xl p-4 rounded bg-accent text-surface font-bold" onclick="nextCard()">
+          Next
+        </button>
+        <button class="text-2xl p-4 rounded border border-secondary text-secondary"
+          onclick="previousCard()">
+          Back
+        </button>
+      </div>
+    </div>
+
+    <!-- Card 8 -->
+    <div id="cardContainer8" data-card="8" class="flex flex-col px-7 pt-8 gap-8 hidden md:max-w-[425px] lg:pt-14 lg:max-w-[534px] lg:w-full lg:px-0 lg:items-center">
+      <div class="flex flex-col gap-12">
+       
+        <img src="./assets/images/step8.png" class="lg:w-[472px] lg:h-[32px]"/>
+
+        <div>
+          <p class="text-2xl text-primary text-center">
+            <span class="font-bold">
+              Thanks [name], your quote is ready!
+            </span class="font-medium">
+            <br />
+            <span> Where do we send it to? </span>
+          </p>
+        </div>
+      </div>
+
+      <form class="flex flex-col gap-6 lg:w-[364px]">
+        <div class="relative">
+          <label class="absolute bg-surface text-placeholder text-xs px-1 ml-3.5 top-[-10px]">Email</label>
+          <input type="email" name="email" placeholder="Email"
+            class="pl-4 pr-14 py-2 rounded border-[1px] border-secondary w-full h-14" />
+
+          <img src="assets/images/email.svg" class="absolute right-3 top-1/2 transform -translate-y-1/2 cursor-pointer">
+        </div>
+
+        <div class="relative">
+          <label class="absolute bg-surface text-placeholder text-xs px-1 ml-3.5 top-[-10px]">Phone
+            Number</label>
+          <input type="number" name="phone" placeholder="Phone Number"
+            class="pl-4 pr-14 py-2 rounded border-[1px] border-secondary w-full h-14" />
+          <img src="assets/images/phone.svg" class="absolute right-3 top-1/2 transform -translate-y-1/2 cursor-pointer">
+        </div>
+      </form>
+
+      <div class="flex flex-col gap-4 lg:w-[364px]">
+        <button class="text-2xl p-4 rounded bg-accent text-surface font-bold" onclick="nextCard()">
+          Next
+        </button>
+        <button class="text-2xl p-4 rounded border border-secondary text-secondary"
+          onclick="previousCard()">
+          Back
+        </button>
+      </div>
+    </div>
+
+    <!-- Card 9 -->
+    <div id="cardContainer9" data-card="9" class="flex flex-col px-7 pt-8 gap-8 hidden md:max-w-[425px] lg:pt-14 lg:max-w-[492px] lg:w-full lg:px-0 lg:items-center">
+      <div class="flex flex-col gap-12">
+
+        <p class="text-2xl text-primary font-bold text-center">
+          Your personalized quote is being processed
+        </p>
+
+        <img src="./assets/images/processing.gif" class="w-[358px] h-[358px] self-center"/>
+      </div>
+      <div class="flex flex-col gap-4 lg:w-[364px]">
+        <button class="text-2xl p-4 rounded bg-accent text-surface font-bold" onclick="nextCard()">
+          Next
+        </button>
+        <button class="text-2xl p-4 rounded border border-secondary text-secondary"
+          onclick="previousCard()">
+          Back
+        </button>
+      </div>
+    </div>
+
+    <!-- Card 10 -->
+    <div id="cardContainer10" data-card="10" class="flex flex-col gap-8 pt-8 px-6 hidden md:max-w-[425px] lg:pt-14 lg:max-w-[1048px] lg:w-full lg:px-0 lg:items-center lg:justify-center lg:flex-row">
+      <div class="flex flex-col gap-6 py-8 lg:w-[510px] lg:p-12 lg:shadow-shadow lg:shadow-sm lg:hover:shadow-md lg:hover:shadow-shadow">
+        <div class="flex gap-4">
+          <p class="text-palceholder text-7xl font-black"> 1 </p>
+          <span class="text-2xl">
+            <span class="font-bold">
+              Your Quote is Ready
+            </span> <br />
+            <span>
+              Review your options here
+            </span>
+        </div>
+
+        <p class="text-primary font-light">www.gethealthcoverage.org/quote</p>
+
+        <ul class="list-disc px-6">
+          <li>
+            Your California quote is ready- here’s what to know.
+          </li>
+          <li>
+            Your qualify for several low cost options available in CA.
+          </li>
+          <li>
+            Blue Cross of California, UnitedHealth, Aetna & more are available in your area.
+          </li>
+          <li>Last step- Confirm your quote request now.</li>
+        </ul>
+
+        <button class="h-14 bg-accent rounded text-white text-2xl font-bold">
+          View my quote
+        </button>
+      </div>
+
+      <div class="w-full h-[1px] bg-secondary lg:hidden"></div>
+
+      <div class="flex flex-col gap-6 py-8 lg:w-[510px] lg:p-12 lg:shadow-shadow lg:shadow-sm lg:hover:shadow-md lg:hover:shadow-shadow">
+        <div class="flex gap-4">
+          <p class="text-palceholder text-7xl font-black"> 2 </p>
+          <span class="text-2xl">
+            <span class="font-bold">
+              Discount Health Ready
+            </span> <br />
+            <span>
+              Review your options here
+            </span>
+        </div>
+
+        <p class="text-primary font-light">www.gethealthcoverage.org/quote</p>
+
+        <ul class="list-disc px-6">
+          <li>
+            Your California quote is ready- here’s what to know.
+          </li>
+
+          <li>
+            Your qualify for several low cost options available in CA.
+          </li>
+
+          <li>
+            Blue Cross of California, UnitedHealth, Aetna & more are available in your area.
+          </li>
+
+          <li>Last step- Confirm your quote request now.</li>
+        </ul>
+
+        <button class="h-14 bg-accent rounded text-white text-2xl font-bold">
+          View my quote
+        </button>
+      </div>
+
+      <div class="w-full h-[1px] bg-secondary lg:hidden"></div>
+
+      <div class="flex flex-col gap-6 py-8 lg:hidden">
+        <div class="flex gap-4">
+          <p class="text-palceholder text-7xl font-black"> 3 </p>
+          <span class="text-2xl">
+            <span class="font-bold">
+              New 2023 Health Plans
+            </span> <br />
+            <span>
+              Review your options here
+            </span>
+        </div>
+
+        <p class="text-primary font-light">www.gethealthcoverage.org/quote</p>
+
+        <ul class="list-disc px-6">
+          <li>
+            Your California quote is ready- here’s what to know.
+          </li>
+
+          <li>
+            Your qualify for several low cost options available in CA.
+          </li>
+
+          <li>
+            Blue Cross of California, UnitedHealth, Aetna & more are available in your area.
+          </li>
+
+          <li>Last step- Confirm your quote request now.</li>
+        </ul>
+
+        <button class="h-14 bg-accent rounded text-white text-2xl font-bold">
+          View my quote
+        </button>
+      </div>
+    </div>
+  </main>
+
+  <script src="./assets/index.js"></script>
+  <script>
+    function nextCard() {
+      const currentCard = document.querySelector("[data-card]:not(.hidden)");
+      const currentCardNumber = currentCard.dataset.card;
+      const nextCardNumber = parseInt(currentCardNumber) + 1;
+      const nextCard = document.getElementById(
+        "cardContainer" + nextCardNumber
+      );
+
+      if (nextCard) {
+        currentCard.classList.add("hidden");
+        nextCard.classList.remove("hidden");
+      }
+    }
+
+    function previousCard() {
+      const currentCard = document.querySelector("[data-card]:not(.hidden)");
+      const currentCardNumber = currentCard.dataset.card;
+      const previousCardNumber = parseInt(currentCardNumber) - 1;
+      const previousCard = document.getElementById(
+        "cardContainer" + previousCardNumber
+      );
+
+      if (previousCard) {
+        currentCard.classList.add("hidden");
+        previousCard.classList.remove("hidden");
+      }
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+    if (document.querySelector('[data-card="9"]:not(.hidden)')) {
+      console.log("not hidden");
+      setTimeout(() => {
+        console.log("time out");
+        nextCard();
+      }, 2000);
+    }
+  });
+  </script>
+</body>
+
+</html>
